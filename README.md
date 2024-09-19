@@ -52,6 +52,8 @@ Aquí algunos recursos adicionales que te ayudarán a profundizar en los temas a
 - [W3Schools](https://www.w3schools.com/)
 - [Frontend Mentor](https://www.frontendmentor.io/)
 - [FreeCodeCamp](https://www.freecodecamp.org/)
+- [React Doc](https://es.react.dev/)
+- [React 0 to Ninja](https://www.youtube.com/watch?v=j942wKiXFu8&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&ab_channel=NetNinja)
 
 ## Contribuciones
 
