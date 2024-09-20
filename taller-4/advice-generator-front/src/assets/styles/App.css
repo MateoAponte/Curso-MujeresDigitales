@@ -85,6 +85,16 @@ html {
   height: 100%;
 }
 
+.advice__buttons {
+  display: flex;
+  width: 100%;
+  bottom: -30px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  padding: 0 5vw;
+  box-sizing: border-box;
+}
 .advice__button {
   background-color: var(--color-neon-green);
   border: unset;
@@ -93,16 +103,21 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  bottom: -30px;
-  cursor: pointer;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0 0 15px 5px var(--shadow-neon-green);
     transform: scale(1.1);
   }
 }
+.advice__button--pos-left {
+  left: 1rem;
+}
+.advice__button--pos-right {
+  right: 1rem;
+}
+
 .advice__button-icon {
   width: 1.6rem;
   height: 1.6rem;

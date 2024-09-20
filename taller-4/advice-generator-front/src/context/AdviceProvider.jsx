@@ -2,17 +2,16 @@ import React from 'react';
 import AdviceContext from './AdviceContext';
 import { useFetch } from '../hook/useFetch';
 
-const AdviceUrl = 'https://api.adviceslip.com/advice';
-
 export const AdviceProvider = ({ children }) => {
   const {
     data: { slip },
     loading,
+    dispatch,
     fetchData,
-  } = useFetch(AdviceUrl);
+  } = useFetch();
 
   return (
-    <AdviceContext.Provider value={{ slip, loading, fetchData }}>
+    <AdviceContext.Provider value={{ slip, loading, dispatch, fetchData }}>
       {children}
     </AdviceContext.Provider>
   );
