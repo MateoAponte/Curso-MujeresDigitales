@@ -1,0 +1,49 @@
+.steps-container {
+  height: 100%;
+  width: 20%;
+  list-style: none;
+  background-size: cover;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .step-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+
+    &--active {
+      .step-item__bullet {
+        background-color: $blue;
+        color: $marine-blue;
+      }
+    }
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+    }
+    &__bullet {
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      margin-right: 1rem;
+      border-radius: 100%;
+      border: 1px solid $light-gray;
+      font-size: 1.2rem;
+      color: $light-gray;
+    }
+    &__info {
+      font-size: 1rem;
+      font-weight: 400;
+      color: $light-gray;
+      text-transform: uppercase;
+    }
+    &__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: $magnolia;
+      text-transform: uppercase;
+    }
+  }
+}
