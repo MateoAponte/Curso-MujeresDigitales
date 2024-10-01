@@ -10,17 +10,17 @@ export const STEP_PREVIEW_INFO = [
     component: InfoStep,
   },
   {
-    title: 'Select Plan',
+    title: 'Select your Plan',
     description: 'You have the option of monthly or yearly billing.',
     component: PlanStep,
   },
   {
-    title: 'ADD-ON',
+    title: 'Pick Add-ons',
     description: 'Add-ons help enhance your gaming experience.',
     component: AddonStep,
   },
   {
-    title: 'Summary',
+    title: 'Finishing up',
     description: 'Double-check everything looks OK before confirming.',
     component: Summary,
   },
