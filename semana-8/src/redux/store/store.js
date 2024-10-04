@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import messageSlice from '../slice/messageSlice';
+import messageSlice from '../slice/message/slice.js';
 
 export const store = configureStore({
   // Slices
