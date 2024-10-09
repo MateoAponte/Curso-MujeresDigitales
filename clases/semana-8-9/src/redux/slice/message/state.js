@@ -1,4 +1,4 @@
-const initialState = {
+export default {
   status: {
     title: 'Información exitosa',
     type: 'succcess',

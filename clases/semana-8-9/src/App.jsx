@@ -2,21 +2,26 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPosts, setStatus } from './redux/slice/messageSlice';
 import { useEffect } from 'react';
+import { ACTIONS } from './redux/slice/message/types';
+import { thunks } from './redux/slice/message/thunks';
+import { actions } from './redux/slice/message/slice';
 
 function App() {
-  const { status, posts } = useSelector((state) => state.message);
+  const { status } = useSelector((state) => state.message);
   const dispatch = useDispatch();
   const handleClick = () => {
-    dispatch(setStatus({ title: 'Información fallida', type: 'error' }));
+    dispatch(
+      actions[ACTIONS.SET_STATUS]({
+        title: 'Información fallida',
+        type: 'error',
+      })
+    );
   };
 
   useEffect(() => {
-    dispatch(fetchPosts());
+    dispatch(thunks[ACTIONS.FETCH_POSTS]());
   }, []);
-
-  console.log(posts);
 
   return (
     <>
