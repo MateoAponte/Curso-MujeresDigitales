@@ -1,4 +1,4 @@
-# Taller #5 - Uso de Redux
+# Taller #6 - Router, State & Styles
 
 ## Clases SENA
 
