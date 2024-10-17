@@ -1,7 +1,3 @@
 export const fetchData = async () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve('Datos cargados');
-    }, 1000);
-  });
+  return (await fetch('https://jsonplaceholder.typicode.com/posts/')).json();
 };
