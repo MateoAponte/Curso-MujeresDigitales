@@ -28,16 +28,14 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <p>Ya sabemos hacer CD</p>
       </div>
       <section className="pets-container">
-        <figure>
+        <figure className="pest-container__image">
           <img src={dogs[0]?.url} alt="Dog" />
           <figcaption>{dogs[0]?.id}</figcaption>
         </figure>
-        <figure>
+        <figure className="pest-container__image">
           <img src={cats[0]?.url} alt="Cat" />
           <figcaption>{cats[0]?.id}</figcaption>
         </figure>
