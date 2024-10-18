@@ -1,32 +1,29 @@
 import { useEffect, useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import { fetchCats } from './helpers/catsApi';
 import './App.css';
+import CatService from './services/cat/CatService';
+import DogService from './services/dog/DogService';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [dogs, setDogs] = useState([]);
+  const [cats, setCats] = useState([]);
 
   useEffect(() => {
     const getCat = async () => {
-      const cats = await fetchCats();
-      console.log(cats);
+      const cats = await CatService.getCats();
+      setCats(cats);
+
+      const dogs = await DogService.getDogs();
+      setDogs(dogs);
     };
 
     getCat();
-  });
+  }, []);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React By Mujeres Digitales</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -35,9 +32,16 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <section className="pets-container">
+        <figure>
+          <img src={dogs[0]?.url} alt="Dog" />
+          <figcaption>{dogs[0]?.id}</figcaption>
+        </figure>
+        <figure>
+          <img src={cats[0]?.url} alt="Cat" />
+          <figcaption>{cats[0]?.id}</figcaption>
+        </figure>
+      </section>
     </>
   );
 }
