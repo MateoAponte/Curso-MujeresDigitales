@@ -8,19 +8,23 @@ export const useFetch = () => {
   const fetchData = async (url) => {
     setError(false);
     setLoading(true);
+    console.log('Fetch data');
+    
     try {
-      const response = await fetch('https://randomuser.me/api/')
-      .then(async() => {
-        const json = await response.json();
+      await fetch('https://randomuser.me/api/')
+      .then(async(res) => {
+        const json = await res.json();
         setData(json.results[0])
       })
       .catch(() => {
+        console.log('Has error in fetch');
         setError(true);
       })
       .finally(() => {
         setLoading(false);
       })
     } catch(err) {
+      console.log('Has error in catch');
       setError(true);
       throw new Error('Error inesperado: ' + err)
     }

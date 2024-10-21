@@ -1,0 +1,129 @@
+.card {
+  border-radius: 8px;
+  box-shadow: 1px;
+  padding: 1.2rem 1.5rem 2rem;
+  background-color: $card-color;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 25vw;
+  width: 25vw;
+  
+  &-preview {
+    &__image {
+      margin: 1rem 0px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      img {
+        width: 40vw;
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1),
+          0px 4px 6px rgba(0, 0, 0, 0.05);
+      }
+    }
+    &__border {
+      padding: 0.7rem;
+      width: 11vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__info {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding-bottom: 0.3rem;
+
+      &-gender {
+        padding: 0.3rem 0.6rem;
+        font-weight: 500;
+        border-radius: 8px;
+        color: $card-color;
+        text-transform: capitalize;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        border: 1px solid $border-color-light;
+
+        svg {
+          margin-right: 0.3rem;
+        }
+
+        &--male {
+          color: #667BC6;
+        }
+        
+        &--female {
+          color: #d4459b;
+        }
+      }
+
+      &-nat {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        border: 1px solid $border-color-light;
+        color: rgba($text-color, 0.7);
+
+        img {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    &__title {
+      width: 100%;
+      text-align: center;
+      color: $title-color;
+      font-size: 1.2rem;
+    }
+
+    &__row {
+      margin-top: 0.5rem;
+      padding-bottom: 0.2rem;
+    }
+
+    &__label {
+      font-weight: 600;
+      margin-right: 0.5rem;
+      color: $label-color;
+      font-size: 0.9rem;
+    }
+    &__content {
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: #8078d3;
+    border: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    color: $card-color;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}
