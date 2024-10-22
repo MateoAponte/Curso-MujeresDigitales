@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "deploy:test": "vite build && vitest"
+    "deploy:test": "vitest && vite build"
   },
   "dependencies": {
     "axios": "^1.7.7",
