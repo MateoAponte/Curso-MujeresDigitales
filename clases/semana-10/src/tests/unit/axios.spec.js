@@ -34,7 +34,7 @@ describe('Función fetchAxiosData', () => {
     axios.get.mockRejectedValue(205);
     const idTodo = 1;
     await expect(fetchAxiosData(idTodo)).rejects.toThrowError(
-      'Status Code 205',
+      'Status Code 204',
     );
   });
 });
