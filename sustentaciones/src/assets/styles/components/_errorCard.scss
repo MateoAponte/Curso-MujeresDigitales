@@ -1,0 +1,17 @@
+.error-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 45vh;
+
+  svg {
+    font-size: 5rem;
+    color: #D10363;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    color: #D10363;
+  }
+}
