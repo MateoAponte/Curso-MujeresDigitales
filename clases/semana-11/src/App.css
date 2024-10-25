@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+.container {
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+}
+
+.card {
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  font-size: 1.3rem;
+  padding: 2rem;
+  margin: 1rem;
+  width: 15vw;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

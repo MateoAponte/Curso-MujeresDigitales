@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Statefull } from './components/statefull/Statefull';
+import { Stateless } from './components/stateless/Stateless';
+import { Hocs } from './components/hocs/Hocs';
+import './App.css';
+import { InfoHeader } from './components/hocs/InfoHeader';
+import { ErrorHeader } from './components/hocs/ErrorHeader';
 
-function App() {
-  const [count, setCount] = useState(0)
+export const App = () => {
+  const cardInfo = {
+    title: 'Tipos de componente',
+    message: 'Este es un componente de ',
+    status: 'info',
+  };
+
+  const getTitle = `${cardInfo.title} - ${cardInfo.status}`;
+  const header =
+    cardInfo.status === 'info' ? (
+      <InfoHeader title={getTitle} />
+    ) : (
+      <ErrorHeader title={getTitle} />
+    );
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="container">
+        <Statefull {...cardInfo} type="statefull" />
+        <Stateless {...cardInfo} type="stateless" />
+        <Hocs {...cardInfo} type="Hoc's" header={header} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
-}
-
-export default App
+  );
+};
